@@ -1,5 +1,5 @@
 <?php
-$vid = array('1.mp4','2.mp4','3.mp4','4.mp4','5.mp4');
+$vid = array('1.mp4','2.mp4','3.mp4');
 shuffle($vid);
 ?>
 <html>
@@ -66,7 +66,7 @@ h2 {
 <h2>All you need is a little fumo!</h2>
 <ul>
   <?php
-   for( $i = 0; $i < 3; $i++)
+   for( $i = 0; $i < 1; $i++)
       echo "<li style=\"display: inline;\">
               <video width=\"320\" height=\"320\" controls=\"\" autoplay=\"\" loop=\"\">
               <source src=\"$vid[$i]\" type=\"video/mp4\">
@@ -75,8 +75,7 @@ h2 {
 
 ?>
  </ul>
-</ul>
-
+<p>Here's a list of <a href="sources.html">video sources</a></p>
 <p>Thanks to <a href="https://www.instagram.com/presidente_loli_chan/">Presidente Loli-chan</a> for funding this website</p>
 <p>Created and managed by <a href="https://nekoto.moe">Nekoto</a></p>
 </body>
