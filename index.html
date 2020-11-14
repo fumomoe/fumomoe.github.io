@@ -1,53 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta property="og:title" content="Fumo!">
+    <meta property="og:title" content="Fumo.moe!">
 <meta property="og:image" content="fumo.jpg">
 <meta property="og:description" content="All you need is a little fumo!">
 <meta property="og:url" content="https://fumo.moe">
 <meta name="twitter:card" content="summary_large_image">
-    <meta name="title" content="Fumo!">
+    <meta name="title" content="Fumo.moe!">
 <meta name="description" content="fumo.moe">
 <meta name="keywords" content="fumos">
 <meta name="robots" content="index, follow">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="language" content="English">
-<title>Fumo!</title>
+<title>Fumo.moe!</title>
   </head>
-  <script>
-  /**
- * start when the browser has finished parsing but is still loading sub-resources (like videos)
- * not needed in JSFiddle as you can choose it in the options (onDomready)
- *
- * document.onreadystatechange = function () {
- *     if (document.readyState == "interactive") {
- **/
-
-// build up your storage for video urls here
-// leave out the file extension, we will let the browser decide which type he can play.
-// also note how I left out the 'http:' part. we don't need it, the browser automatically
-// decides if he needs http or https.
-var videoStorage = [
-    '//media.w3.org/2010/05/sintel/trailer',
-    '//techslides.com/demos/sample-videos/small',
-    '//fat.gfycat.com/DazzlingCompleteAnkole',
-    '//zippy.gfycat.com/HeavyPlumpIvorybilledwoodpecker'
-  ],
-  video = document.querySelector('video'),
-  // choose one random url from our storage as the active video
-  activeVideoUrl = videoStorage[Math.round(Math.random() * (videoStorage.length - 1))];
-
-// check which file extension your browser can play and set the video source accordingly
-if (video.canPlayType('video/webm')) {
-  video.setAttribute('src', activeVideoUrl + '.webm');
-} else if (video.canPlayType('video/mp4')) {
-  video.setAttribute('src', activeVideoUrl + '.mp4');
-}
-/*}
-}*/
-
-  </script>
     <style>
+  th, td {
+      color: white;
+      border: 1px solid white;
+      padding: 5px 10px 5px 10px;
+    }
 body {
   background-color: black;
 }
@@ -55,9 +27,9 @@ h1 {
   color: white;
 }
 h2 {
-  color: white;
+
 }
-p {
+p, h3, h4 {
   color: white;
 }
 .content {
@@ -66,7 +38,7 @@ p {
   text-align: center;
 }
 a:link {
-  color: green;
+  color: orange;
   background-color: transparent;
   text-decoration: none;
 }
@@ -85,7 +57,8 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
-h2 {
+h3 {
+  color: white;
   font-style: italic;
 }
 body {
@@ -102,18 +75,31 @@ video
 
 <body class="content">
 
-<h1>Fumo!</h1>
-  <h2>All you need is a little fumo!</h2>
-  <!--
-      I removed the ogv video because every player that can play ogv can play webm and many video hosters only give you mp4 and webm sources (http://caniuse.com/#search=video)
-  -->
+<h1>Fumo.moe!</h1>
+  <h3>All you need is a little fumo!</h3>
+  <table id="customers" class="content">
+  <tr>
+    <th><a href="https://fumo.moe">Home</a></th>
+    <th><a href="https://fumo.moe/videos">Video Sources</a></th>
+    <th><a href="https://fumo.moe/guide">Buying Guides</a></th>
+  </tr>
+  </table>
+    <hr>
   <video autoplay controls loop>
-      <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4'>
-      <source src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm' />
-      Video not supported.
+      <source src= "http://fumo.moe/videos/<?php echo rand(1, 9) ?>.mp4" type="video/mp4"/>
   </video>
 </video>
-<p>Thanks to <a href="https://www.instagram.com/presidente_loli_chan/">Presidente Loli-chan</a> for funding this website</p>
+<table id="customers" class="content">
+  <tr>
+    <th><a href="https://fumo.moe">Another random fumo video please!</a></th>
+  </tr>
+</table>
+<hr>
 <p>Created and managed by <a href="https://nekoto.moe">Nekoto</a></p>
+<p>Thanks to <a href="https://www.instagram.com/presidente_loli_chan/">Presidente Loli-chan</a> for funding this website</p>
+<p>Credits to <a href="https://twitter.com/TheRealSolruc">Solruc</a> for helping to get the video randomization working</p>
+<hr>
+<p>All content provided on this site is the intellectual property of their rightful owners. Fumo.moe does not claim ownership of any of the content provided.
+<p>For comments and inquiries, contact nekotosume(at)gmail(dot)com</p>
 </body>
 </html>
